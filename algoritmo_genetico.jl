@@ -5,14 +5,14 @@ using Plots
 PESOS = [16, 18, 1, 8, 12, 0, 5, 6, 2, 13]
 VALORES = [32, 20, 25, 11, 35, 50, 47, 34, 19, 33]
 PESO_MAX = 50
-TOTAL_CROMOSSOMOS = length(pesos)
+TOTAL_CROMOSSOMOS = length(PESOS)
 rng = MersenneTwister(42)
 
 # Funções com "!" alteram o conteúdo do dado
 
 # Valida peso
 function valida_peso(x)
-    valor = sum(x .* pesos)
+    valor = sum(x .* PESOS)
     if valor >= PESO_MAX
         return 0
     end
